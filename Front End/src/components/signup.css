@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 50px; */
+    /* background-color: black; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://tse4.mm.bing.net/th?id=OIP.mbXF08THrqK-ZN-5h65VuQHaE8&pid=Api&P=0");
+}
+
+.sign {
+    /* border: 4px solid white; */
+    background-color:rgb(222, 219, 219);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 80px;
+    
+}
+
+.signinhead{
+    background-color:  rgb(106, 105, 105);
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.username {
+    margin-top: 10px;
+}
+
+.email {
+    margin-top: 10px;
+}
+
+.password {
+    margin-top: 10px;
+}
+
+.phnnumber {
+    margin-top: 10px;
+}
+
+.btnsignin {
+    margin-top: 25px;
+}
+
+.signhead {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    margin-left: 80px;
+    
+}
+
+.btnsignin {
+    display: flex;
+    /* border: 1px solid; */
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.MuiFormControl-root {
+    color: rgb(232, 244, 240);
+
+}

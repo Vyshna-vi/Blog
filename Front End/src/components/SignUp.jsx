@@ -3,6 +3,7 @@ import { Button, TextField } from '@mui/material'
 import axios from 'axios'
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { signup } from '../Api/api'
 
 function SignUp() {
 
@@ -22,7 +23,7 @@ function SignUp() {
             phonenumber: userphonenumber.current.value
         }
 
-        const res = await axios.post("http://localhost:5000/add-user", user)
+        const res = await axios.post(signup, user)
         console.log(res);
         if (res.data.sucess == true) {
             navigate("/login")
@@ -37,7 +38,9 @@ function SignUp() {
 
     return (
         <div className='sign'>
+            <div className='signinhead'>
             <h1 className='signhead'>Sign Up</h1>
+            </div>
             <TextField id="standard-basic" label="Username" className='username' variant="standard" inputRef={usersignname} />
             <TextField id="standard-basic" label="Email" className='email' variant="standard" inputRef={usersignemail} />
             <TextField id="standard-basic" label="Password" className='password' variant="standard" inputRef={usersignpassword} />

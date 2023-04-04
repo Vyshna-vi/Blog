@@ -1,0 +1,56 @@
+.addblog {
+    /* border: 4px solid white; */
+    background-color: rgb(222, 219, 219);
+    width: 300px;
+    height: 400px;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addbloghead {
+    background-color: rgb(106, 105, 105);
+    width: 300px;
+}
+
+.blogtitle {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.blogdescrip {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.texttitle {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.textdescrip {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.mainhead {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 80px;
+    color: aliceblue;
+}
+
+.addbtn {
+    background-color: rgb(106, 105, 105);
+    height: 25px;
+    width: 90px;
+    border-radius: 5px;
+}
+
+.viewblogbtn {
+    background-color: rgb(106, 105, 105);
+    height: 25px;
+    width: 90px;
+    border-radius: 5px;
+}

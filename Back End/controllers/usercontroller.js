@@ -22,7 +22,8 @@ const doLogin = async (req, res) => {
             if (userExist) {
                 res.json({
                     success: true,
-                    message: "logined"
+                    message: "logined",
+                    user
                 })
             }
         } else {
@@ -34,6 +35,9 @@ const doLogin = async (req, res) => {
         })
     }
 }
+
+
+
 
 
 
