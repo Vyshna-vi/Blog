@@ -31,7 +31,7 @@ function AddBlog() {
 
     }
 
-    function viewBlog(){
+    function viewBlog() {
         navigate('/singleuserblog')
     }
 
@@ -39,14 +39,16 @@ function AddBlog() {
         <div className='back'>
             <div className='addblog'>
                 <div className='addbloghead'>
-                <h1 className='mainhead'>Add Blog</h1>
+                    <h1 className='mainhead'>Add Blog</h1>
                 </div>
                 <h4 className='blogtitle'>Title</h4>
                 <TextareaAutosize placeholder='Enter Title' className='texttitle' ref={titleRef} />
                 <h4 className='blogdescrip'>Description</h4>
                 <TextareaAutosize placeholder='Enter Description' className='textdescrip' minRows={5} ref={descripRef} />
-                <button className='addbtn' onClick={submit}>Add Blog</button>
-                <button className='viewblogbtn' onClick={viewBlog}>View Blog</button>
+                <div className='btns'>
+                    <button className='addbtn' onClick={submit}>Add Blog</button>
+                    <button className='viewblogbtn' onClick={viewBlog}>View Blog</button>
+                </div>
             </div>
         </div>
     )

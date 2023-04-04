@@ -11,7 +11,7 @@ function UserMain() {
     const { loggedInUser } = useContext(UserContext)
     async function fetchuserblogs() {
         let singleBlog = await axios.get(singleUserBlog + loggedInUser._id)
-        console.log(singleBlog);
+        console.log("sinleuserblog".singleBlog);
         setSingleUserBlogs(singleBlog.data.singleBlog)
     }
     useEffect(() => { fetchuserblogs() })
