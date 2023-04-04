@@ -11,16 +11,16 @@ function UserMain() {
     const { loggedInUser } = useContext(UserContext)
     async function fetchuserblogs() {
         let singleBlog = await axios.get(singleUserBlog + loggedInUser._id)
-        console.log("sinleuserblog".singleBlog);
+        console.log("sinleuserblog", singleBlog);
         setSingleUserBlogs(singleBlog.data.singleBlog)
     }
-    useEffect(() => { fetchuserblogs() })
+    useEffect(() => { fetchuserblogs() }, [])
 
     return (
         <div>
             {singleUserBlogs && singleUserBlogs.map((b) => {
                 return (
-                    <SingleUserBlog singleuserBlog={b} />
+                    <SingleUserBlog Blog={b} />
                 )
             })}
         </div>

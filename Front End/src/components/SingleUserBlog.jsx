@@ -1,14 +1,25 @@
 import React from 'react'
 import './singleuserblog.css'
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import axios from 'axios';
+import { singleUserBlog } from '../Api/api';
 
-function SingleUserBlog(singleuserBlog) {
+function SingleUserBlog({ Blog }) {
+
+async function deleteOne(){
+  let deleteOneBlog=await axios.delete(singleUserBlog+Blog._id)
+}
+
   return (
     <div className='userblog'>
-        <p>{singleuserBlog.blog_title}</p>
-        <p>{singleuserBlog.blog_descrip}</p>
-        <p>{singleuserBlog.author_name}</p>
-        <p>{singleuserBlog.author_id}</p>
-        <p>{singleuserBlog.date_posted}</p>
+      <p>{Blog.blog_title}</p>
+      <p>{Blog.blog_descrip}</p>
+      <p>{Blog.author_name}</p>
+      <p>{Blog.author_id}</p>
+      <p>{Blog.date_posted}</p>
+      <DeleteIcon  onClick={deleteOne} />
+      <EditIcon />
     </div>
   )
 }

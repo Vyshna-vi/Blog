@@ -27,11 +27,22 @@ const viewAllBlog = async (req, res) => {
 const viewOneBlog = async (req, res) => {
     try {
         let singleBlog = await BlogModel.find({ author_id: req.params.id })
-        console.log("singleblog", singleBlog);
+        // console.log("singleblog", singleBlog);
         res.json({ singleBlog })
     } catch (error) {
         res.json({ sucess: false, message: "failed to load single blog" });
         console.log("oneblogerror", error);
+    }
+}
+
+const deleteBlog = async (req, res) => {
+    try {
+        let deleteBlog = await BlogModel.deleteOne({ _id: req.params.id })
+        console.log(deleteBlog);
+        res.json({ sucess: true, message: "deleted successfully" })
+    } catch (error) {
+        res.json({ sucess: false, message: "failed to delete single blog" });
+        console.log("deleteblogerror", error);
     }
 }
 
@@ -45,5 +56,6 @@ const viewOneBlog = async (req, res) => {
 module.exports = {
     addBlog,
     viewAllBlog,
-    viewOneBlog
+    viewOneBlog,
+    deleteBlog
 }

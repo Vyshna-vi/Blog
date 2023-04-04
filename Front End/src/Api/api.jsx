@@ -7,3 +7,5 @@ export const addblogapi = "http://localhost:5000/blog/addblog"
 export const allBlogapi = "http://localhost:5000/blog/allblog"
 
 export const singleUserBlog="http://localhost:5000/blog/singleblog/"
+
+export const deleteSingleBlog="http://localhost:5000/blog/singleblog/"
