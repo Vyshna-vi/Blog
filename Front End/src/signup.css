@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: cadetblue;
+}
+
+.sign {
+    border: 1px solid;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.username {
+    margin-top: 10px;
+}
+
+.email {
+    margin-top: 10px;
+}
+
+.password {
+    margin-top: 10px;
+}
+
+.phnnumber {
+    margin-top: 10px;
+}
+
+.btnsignin {
+    margin-top: 25px;
+}
+
+.signhead {
+    margin-top: 0;
+}
+
+.btnsignin {
+    display: flex;
+    /* border: 1px solid; */
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
