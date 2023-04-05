@@ -6,7 +6,6 @@ import './allblog.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate } from 'react-router-dom'
 
-
 function AllBlog() {
 
     const [allBlogs, setAllBlogs] = useState()
@@ -28,7 +27,17 @@ function AllBlog() {
 
     return (
         <div>
-            <ArrowBackIosIcon className='arrowback' onClick={back} />
+            <div className='navbar'>
+                <ArrowBackIosIcon className='arrowback allblogsarrow' onClick={back} />
+                <h2 className='nameweb'>BLOG</h2>
+                <div className='navsub'>
+                    <button className='navbtns'>Home</button>
+                    <button className='navbtns'>About</button>
+                    <button className='navbtns'>Contact</button>
+                    <button className='navbtns'>Sign In</button>
+                    <button className='navbtns'>Log Out</button>
+                </div>
+            </div>
             <h1 className='allblogsmain'>Blogs</h1>
             <div className='allblogs'>
                 {allBlogs && allBlogs.map((r) => {

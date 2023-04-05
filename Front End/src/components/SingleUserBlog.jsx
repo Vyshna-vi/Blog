@@ -28,13 +28,14 @@ function SingleUserBlog({ Blog }) {
 
   return (
     <div className='userblog'>
-      <p className='singlepara1'>{Blog.blog_title}</p>
-      <p className='singlepara1'>{Blog.blog_descrip}</p>
       <div className='singleparaid'>
-        <p className='singlepara'>{Blog.author_name}</p>
-        <p className='singlepara'>{Blog.author_id}</p>
-        <p className='singlepara'>{Blog.date_posted}</p>
+        <p className='singlepara2'>{Blog.author_name}</p>
+        <p className='singlepara4'>{Blog.date_posted}</p>
       </div>
+      <hr  className='hr1'/>
+      <p className='singlepara5'>{Blog.blog_title}</p>
+      <p className='singlepara1'>{Blog.blog_descrip}</p>
+      <hr className='hr2'/>
       <DeleteIcon onClick={deleteOne} className='deleteicon' />
       <EditIcon className='editicon' onClick={editBlog} />
     </div>

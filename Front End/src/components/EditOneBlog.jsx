@@ -38,7 +38,7 @@ function EditOneBlog() {
 
 
   return (
-    <div className='editpage'>
+    <div className='editpage shadow'>
       <h1 className='hcom heading'>Edit Blog</h1>
       <h3 className='blogname'>Blog Title</h3>
       <OutlinedInput placeholder="Enter Blog Title" value={blogName} onChange={(e) => {
@@ -46,7 +46,7 @@ function EditOneBlog() {
         // console.log(e.target.value)
       }} />
       <h3 className='blogdescrip'>Blog Description</h3>
-      <TextareaAutosize aria-label="empty textarea" minRows={4} placeholder="Blog Description" style={{ width: 220 }} value={blogDescription} onChange={(e) => setBlogDescription(e.target.value)} /><br />
+      <TextareaAutosize aria-label="empty textarea" minRows={4} placeholder="Blog Description" style={{ width: 220,height:100 }} value={blogDescription} onChange={(e) => setBlogDescription(e.target.value)} /><br />
       <div className='btnsedit'>
         <Button variant="outlined" className='addblogbtn' onClick={submit} >Edit Task</Button>
         <Button variant="outlined" className='allblogbtn' onClick={ViewAllBlog}>Back</Button>

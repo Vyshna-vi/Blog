@@ -33,15 +33,17 @@ function Login() {
     }
 
     return (
-        <div className='loginelement'>
-            <div className='login'>
-                <h1 className='loginhead'>LogIn</h1>
+        <div className="nav">
+            <div className='loginelement'>
+                <div className='login'>
+                    <h1 className='loginhead'>LogIn</h1>
+                </div>
+                <h3 className='userlogin'>User Email</h3>
+                <OutlinedInput placeholder='Enter Email' inputRef={useremailref} />
+                <h3 className='passlogin'>Password</h3>
+                <OutlinedInput placeholder='Enter your Password' inputRef={userpassref} /><br />
+                <button className='btnlogin' onClick={login}>Submit</button>
             </div>
-            <h3 className='userlogin'>User Email</h3>
-            <OutlinedInput placeholder='Enter Email' inputRef={useremailref} />
-            <h3 className='passlogin'>Password</h3>
-            <OutlinedInput placeholder='Enter your Password' inputRef={userpassref} /><br />
-            <button className='btnlogin' onClick={login}>Submit</button>
         </div>
     )
 }

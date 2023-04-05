@@ -61,5 +61,11 @@ hr{
 }
 
 .bottom{
-    transform: translate(0px,-26px);
+    transform: translate(0px,0px);
+}
+
+.likeicons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
