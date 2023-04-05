@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+
 .card {
     cursor: pointer;
     margin-left: 30px;
     margin-top: 20px;
     margin-right: 20px;
-    width: 300px;
-    /* height: 254px; */
-    background: linear-gradient(135deg, #e3b7be 0%, #aceae1 100%);
+    width: 600px;
+    background: linear-gradient(135deg, #f6acdf9e 0%, #ab71e4a1 100%);
     border-radius: 40px 0 40px 0;
 }
 
@@ -13,6 +16,50 @@
     box-shadow: -12px 12px 2px -1px rgba(149, 149, 150, 0.475);
 }
 
-.para{
-    margin-left: 20px;
+.parades {
+    overflow-wrap: break-word;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    transform: translate(17px,-10px);
+}
+
+.com1 {
+    font-family: 'Alkatra', cursive;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 550px;
+}
+
+.com2 {
+    font-family: 'Alkatra', cursive;
+    font-size: 12px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 501px;
+}
+
+.com3{
+    font-family: 'Alkatra', cursive;
+    font-size: 10px;
+    transform: translate(20px,-30px);
+}
+
+.head1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 0;
+}
+
+
+hr{
+    color: white;
+    height: 1px;
+    background-color:rgb(109, 106, 111);
+    margin:none
+}
+
+.bottom{
+    transform: translate(0px,-26px);
 }

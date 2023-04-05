@@ -1,16 +1,21 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
 
-   const [loggedInUser,setLoggedInUser]=useState()
+  const [loggedInUser, setLoggedInUser] = useState()
 
-    return (
-      <UserContext.Provider value={{ loggedInUser,setLoggedInUser }}>
-        {children}
-      </UserContext.Provider>
-    );
-  };
+  useEffect(() => {
+    let user = JSON.parse(localStorage.getItem("loggedinuser"))
+    console.log("user from localstorage", user);
+    setLoggedInUser(user)
+  }, [])
 
-  export default UserProvider
-  
+  return (
+    <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>
+      {children}
+    </UserContext.Provider>
+  );
+};
+
+export default UserProvider

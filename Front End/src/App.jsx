@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SignUp from './components/SignUp'
@@ -7,13 +6,11 @@ import AddBlog from './components/AddBlog'
 import UserProvider from './components/Usercontext/UserContext'
 import UserRoute from './components/privateroute/UserRoute'
 import AllBlog from './components/AllBlog'
-import SingleUserBlog from './components/SingleUserBlog'
 import UserMain from './components/UserMain'
-
+import EditOneBlog from './components/EditOneBlog'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="app">
@@ -25,6 +22,7 @@ function App() {
             <Route path='addblog' element={<UserRoute><AddBlog /></UserRoute>} />
             <Route path='allblog' element={<AllBlog />} />
             <Route path='singleuserblog' element={<UserMain />} />
+            <Route path='editblog' element={<EditOneBlog />} />
           </Routes>
         </BrowserRouter>
       </UserProvider>

@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import axios from 'axios';
 import { addblogapi } from '../Api/api';
 import { useNavigate } from 'react-router-dom';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 function AddBlog() {
 
@@ -27,16 +28,21 @@ function AddBlog() {
 
         let res = await axios.post(addblogapi, Blog)
         console.log("blog data", res);
-        navigate('/allblog')
+        navigate('/singleuserblog')
 
     }
 
     function viewBlog() {
-        navigate('/singleuserblog')
+        navigate('/allblog')
+    }
+
+    function back(){
+        navigate('/login')
     }
 
     return (
         <div className='back'>
+            <ArrowBackIosIcon className='arrowback add' onClick={back} />
             <div className='addblog'>
                 <div className='addbloghead'>
                     <h1 className='mainhead'>Add Blog</h1>

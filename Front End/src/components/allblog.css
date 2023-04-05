@@ -3,3 +3,25 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.allblogsmain{
+    margin-left: 280px;
+    text-decoration:underline;
+}
+
+.arrowback:hover{
+color: rgb(170, 105, 232);
+}
+
+.add{
+    transform: translate(-390px,20px);
+}
+
+
+/* edit css */
+
+
+.editbtn{
+    display: flex;
+    justify-content: space-around;
+}
