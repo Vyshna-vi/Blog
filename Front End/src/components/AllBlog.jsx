@@ -5,6 +5,7 @@ import { allBlogapi } from '../Api/api'
 import './allblog.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate } from 'react-router-dom'
+import NavBar from './NavBar'
 
 function AllBlog() {
 
@@ -20,24 +21,13 @@ function AllBlog() {
 
     useEffect(() => { viewAllBlog() }, [])
 
-    function back() {
-        navigate('/addblog')
+    function back(){
+        navigate('/')
     }
 
 
     return (
         <div>
-            <div className='navbar'>
-                <ArrowBackIosIcon className='arrowback allblogsarrow' onClick={back} />
-                <h2 className='nameweb'>BLOG</h2>
-                <div className='navsub'>
-                    <button className='navbtns'>Home</button>
-                    <button className='navbtns'>About</button>
-                    <button className='navbtns'>Contact</button>
-                    <button className='navbtns'>Sign In</button>
-                    <button className='navbtns'>Log Out</button>
-                </div>
-            </div>
             <h1 className='allblogsmain'>Blogs</h1>
             <div className='allblogs'>
                 {allBlogs && allBlogs.map((r) => {

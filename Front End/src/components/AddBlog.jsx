@@ -32,12 +32,8 @@ function AddBlog() {
 
     }
 
-    function viewBlog() {
-        navigate('/allblog')
-    }
-
     function back(){
-        navigate('/login')
+        navigate('/')
     }
 
     return (
@@ -53,7 +49,6 @@ function AddBlog() {
                 <TextareaAutosize placeholder='Enter Description' className='textdescrip' minRows={5} ref={descripRef} />
                 <div className='btns'>
                     <button className='addbtn' onClick={submit}>Add Blog</button>
-                    <button className='viewblogbtn' onClick={viewBlog}>View Blog</button>
                 </div>
             </div>
         </div>

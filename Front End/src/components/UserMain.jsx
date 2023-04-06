@@ -27,7 +27,7 @@ function UserMain() {
     }, [loggedInUser])
 
     function back(){
-        navigate('/addblog')
+        navigate('/')
     }
 
     return (

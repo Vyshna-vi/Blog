@@ -26,18 +26,21 @@
     margin-left: 300px;
 }
 
-.nameweb{
-    margin-left: 100px;
+.navall{
+    display: flex;
+    align-items: center;
 }
 
-.allblogsarrow{
-    transform: translate(20px, 20px);
-
+.nameweb{
+    margin-left: 100px;
+    color: rgb(98, 49, 144);
 }
 
 .navbtns{
     border: none;
-    background-color: rgba(208, 149, 200, .1)
+    background-color: rgba(195, 140, 219, 0);
+    text-decoration: none;
+    color: rgb(136, 131, 131);
 }
 
 .navbar{
@@ -48,8 +51,7 @@
 
 
 .navbtns:hover{
-    border-radius: 5px 0px 5px 0px;
-    background-color: rgb(167, 110, 220);
+    color: rgb(63, 32, 92);
 }
 
 /* edit css */

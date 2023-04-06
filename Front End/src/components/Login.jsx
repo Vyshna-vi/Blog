@@ -5,6 +5,9 @@ import './login.css'
 import { UserContext } from './Usercontext/UserContext'
 import { useNavigate } from 'react-router-dom'
 import { loginapi } from '../Api/api'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import NavBar from './NavBar'
+
 
 function Login() {
 
@@ -25,15 +28,23 @@ function Login() {
             setLoggedInUser(res.data.user)
             // alert(res.data.message)
             localStorage.setItem("loggedinuser", JSON.stringify(res.data.user))
-            navigate('/addblog')
+            navigate('/singleuserblog')
 
         } else {
             alert(res.data.message)
         }
     }
 
+    function back() {
+        navigate('/signup')
+    }
+
     return (
         <div className="nav">
+            <div className='navbarsignup'>
+                <ArrowBackIosIcon className='arrowback loginarrow' onClick={back} />
+                <NavBar />
+            </div>
             <div className='loginelement'>
                 <div className='login'>
                     <h1 className='loginhead'>LogIn</h1>
