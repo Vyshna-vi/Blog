@@ -29,8 +29,8 @@ function SingleUserBlog({ Blog }) {
   return (
     <div className='userblog'>
       <div className='singleparaid'>
-        <p className='singlepara2'>{Blog.author_name}</p>
         <p className='singlepara4'>{Blog.date_posted}</p>
+        <p className='singlepara2'>{Blog.author_name}</p>
       </div>
       <hr  className='hr1'/>
       <p className='singlepara5'>{Blog.blog_title}</p>

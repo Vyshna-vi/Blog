@@ -43,7 +43,6 @@ function Login() {
         <div className="nav">
             <div className='navbarsignup'>
                 <ArrowBackIosIcon className='arrowback loginarrow' onClick={back} />
-                <NavBar />
             </div>
             <div className='loginelement'>
                 <div className='login'>

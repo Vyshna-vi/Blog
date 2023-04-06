@@ -1,11 +1,10 @@
 .userblog {
-    /* background-color: aliceblue; */
     width: 550px;
-    /* height: 300px; */
     border-radius: 30px;
     background: #d29bf4dd;
     box-shadow: 15px 15px 30px #e7c3f4, -15px -15px 30px #ffffff;
     margin-bottom: 20px;
+    margin-right: 0px;
 }
 
 .deleteicon:hover {
@@ -34,52 +33,62 @@
     align-items: center;
     /* margin-bottom: 40px; */
 
-
+.singleparaid{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
 
 .allsingleblog {
     flex-wrap: wrap;
 }
 
 .singlepara1 {
-   transform: translate(20px,-35px);
+    transform: translate(20px, -35px);
 }
 
 .singlepara5 {
     font-size: 20px;
     font-weight: 600;
-    transform: translate(20px,-30px);
-    
+    transform: translate(20px, -30px);
+
 }
 
 .arrow {
-    /* border: 1px solid; */
     transform: translate(-0px);
 }
 
-.add1{
-    transform: translate(-270px,20px);
+.add1 {
+    transform: translate(-270px, 20px);
 }
 
 .head1 {
     transform: translate(-0px);
 }
 
-.hr2{
+.hr2 {
     margin-top: 50px;
     margin-bottom: 0px;
 }
 
-.singlepara2{
-   transform: translate(500px,15px);
-   font-size: 14px;
+.singlepara2 {
+    font-size: 14px;
+    transform: translate(-20px,5px);
 }
 
-.singlepara4{
-   transform: translate(15px,-10px);
-   font-size: 10px;
+.singlepara4 {
+    transform: translate(15px, 5px);
+    font-size: 10px;
 }
 
-.hr1{
-    transform: translate(0px,-15px);
+.hr1 {
+    transform: translate(0px, -15px);
 }
 
+
+
+.addicon {
+    transform: translate(250px, 30px);
+    color: rgb(70, 184, 177);
+    font-size: 40px;
+}

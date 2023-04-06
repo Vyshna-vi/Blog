@@ -17,9 +17,9 @@ function SingleBlog({ singleblog }) {
                 <p className='parades'>{singleblog.blog_descrip}</p>
             </div >
             <div className='likeicons'>
-                <ThumbUpOffAltIcon />
-                <ThumbDownOffAltIcon/>
-                <CommentIcon/>
+                <ThumbUpOffAltIcon  className='thumbicon'/>
+                <ThumbDownOffAltIcon className='thumbicon'/>
+                <CommentIcon className='thumbicon'/>
             </div>
         </div >
     )

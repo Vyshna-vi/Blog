@@ -69,3 +69,7 @@ hr{
     justify-content: space-around;
     margin-bottom: 20px;
 }
+
+.thumbicon:hover{
+color: indianred;
+}

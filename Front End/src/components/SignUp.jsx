@@ -47,7 +47,6 @@ function SignUp() {
         <div>
             <div className='navbarsignup'>
                 <ArrowBackIosIcon className='arrowback signuparrow' onClick={back} />
-                <NavBar />
             </div>
             <div className='sign'>
                 <div className='signinhead'>

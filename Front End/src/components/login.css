@@ -5,7 +5,7 @@
     /* margin-left:450px; */
     width: 300px;
     height: 400px;
-    transform: translate(370px, 20px);
+    transform: translate(0px, 40px);
     background: linear-gradient(135deg, #efe0e3 0%, #aceae1 100%);
     border-radius: 7px;
     box-shadow: 20px 20px 60px #dcd9d9, -20px -20px 60px #ffffff;
@@ -45,5 +45,5 @@
 }
 
 .loginarrow{
-    transform: translate(30px, 50px);
+    transform: translate(-390px, 50px);
 }
