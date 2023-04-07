@@ -11,3 +11,5 @@ export const singleUserBlog = "http://localhost:5000/blog/singleblog/"
 export const deleteSingleBlog = "http://localhost:5000/blog/deleteblog/"
 
 export const editBlogapi="http://localhost:5000/blog/editblog/"
+
+export const selectCategory="http://localhost:5000/blog/viewcategory/"

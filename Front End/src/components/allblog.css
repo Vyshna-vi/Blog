@@ -2,14 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    transform: translate(0px,-90px);
+    transform: translate(0px, -90px);
 }
 
 .allblogsmain {
     margin-left: 280px;
     color: aliceblue;
     text-decoration: underline;
-    transform: translate(0px,-110px);
+    transform: translate(0px, -110px);
     font-size: 50px;
 }
 
@@ -21,33 +21,33 @@
     transform: translate(-390px, 20px);
 }
 
-.navsub{
+.navsub {
     display: flex;
     justify-content: space-around;
     /* border: 1px solid; */
-    width:500px;
+    width: 500px;
     align-items: center;
     margin-left: 300px;
 }
 
-.navall{
+.navall {
     display: flex;
     align-items: center;
 }
 
-.nameweb{
+.nameweb {
     margin-left: 100px;
     color: rgb(98, 49, 144);
 }
 
-.navbtns{
+.navbtns {
     border: none;
     background-color: rgba(195, 140, 219, 0);
     text-decoration: none;
     color: rgb(136, 131, 131);
 }
 
-.navbar{
+.navbar {
     display: flex;
     background-color: rgba(195, 140, 219, 0.4);
     width: 100vw;
@@ -55,7 +55,7 @@
 }
 
 
-.navbtns:hover{
+.navbtns:hover {
     color: rgb(63, 32, 92);
 }
 
@@ -69,25 +69,27 @@
     margin-bottom: 25px;
     /* border: 1px solid; */
     width: 200px;
+    margin-left: 300px;
 }
 
 .blogdescrip {
-    margin-bottom: 10px;
+    /* margin-bottom: 25px; */
     margin-top: 25px;
+    margin-left: 30px;
 }
 
 .blogname {
     margin-bottom: 10px;
-    margin-top: 20px;
-    margin-right: 130px;
+    margin-top: 10px;
+    margin-left: 30px;
 }
 
 .editpage {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     margin-top: 50px;
-    width: 300px;
+    width: 600px;
     /* height: 254px; */
     background: white;
     border-radius: 10px;
@@ -100,15 +102,144 @@
         0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+.heading {
+    margin-left: 30px;
+}
 
+.outlinedit {
+    margin: 0px 20px;
+}
+
+.textedit {
+    margin: 0px 20px;
+}
+
+.labelcat1 {
+    /* transform: translate(-55px, 0px); */
+    font-weight: bold;
+    margin: 0px 20px;
+}
+
+.categories1 {
+    transform: translate(92px, -18px);
+    width: 100px;
+}
 
 
 
 /* css for homepage */
 
-.imgmain{
+.imgmain {
     width: 100vw;
     height: 300px;
     object-fit: cover;
     margin-top: 10px;
 }
+
+/* navbar css */
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-options {
+    display: block;
+}
+
+.dropdown-options .linkcat {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-options .linkcat:hover {
+    color: #f6f6f9;
+    background-color: #5065cd;
+    border-radius: 5px;
+}
+
+/* css for viewcategory */
+
+.paradesc {
+    overflow-wrap: break-word;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    transform: translate(0px,-15px);
+    margin:0px 20px  ;
+}
+
+.coma {
+    font-family: 'Alkatra', cursive;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 540px;
+}
+
+.dateview{
+    font-family: 'Alkatra', cursive;
+    font-size: 12px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 500px;
+    margin-right: 0px;
+}
+
+.comc{
+    font-family: 'Alkatra', cursive;
+    font-size: 10px;
+    transform: translate(20px,-30px);
+}
+
+.heada {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-left: 15px;
+    transform: translate(0px -60px);
+    /* margin-top: 0; */
+}
+
+
+hr{
+    color: white;
+    height: 1px;
+    background-color:rgb(109, 106, 111);
+    margin:none
+}
+
+.likeiconss{
+    display: flex;
+    justify-content: space-around;
+    transform: translate(0px -20px);
+}
+
+.view{ 
+   border: 1px solid;
+   border-radius: 50%;
+   background-color: #5065cd;
+   padding: 10px;
+   border: 1px solid #5065cd;
+}
+
+.view:hover{
+    background-color: #6676c6;
+    color: white;
+}
+

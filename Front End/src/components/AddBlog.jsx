@@ -13,6 +13,7 @@ function AddBlog() {
     const { loggedInUser } = useContext(UserContext)
     const titleRef = useRef()
     const descripRef = useRef()
+    const categoryref = useRef()
 
     const navigate = useNavigate()
 
@@ -23,7 +24,8 @@ function AddBlog() {
             blog_descrip: descripRef.current.value,
             author_name: loggedInUser.user_name,
             author_id: loggedInUser._id,
-            date_posted: new Date().toDateString()
+            date_posted: new Date().toDateString(),
+            category: categoryref.current.value
         }
 
         let res = await axios.post(addblogapi, Blog)
@@ -32,7 +34,7 @@ function AddBlog() {
 
     }
 
-    function back(){
+    function back() {
         navigate('/')
     }
 
@@ -46,9 +48,16 @@ function AddBlog() {
                 <h4 className='blogtitle'>Title</h4>
                 <TextareaAutosize placeholder='Enter Title' className='texttitle' ref={titleRef} />
                 <h4 className='blogdescrip'>Description</h4>
-                <TextareaAutosize placeholder='Enter Description' className='textdescrip' minRows={5} ref={descripRef} />
+                <TextareaAutosize placeholder='Enter Description' className='textdescrip' minRows={5}  style={{height:100}} ref={descripRef} />
+                <label for="category" className='labelcat'>Category:</label>
+                <select name="category" className="categories" ref={categoryref}>
+                    <option value="React">React</option>
+                    <option value="Express">Express</option>
+                    <option value="MongoDB">MongoDB</option>
+                    <option value="HTML-CSS">HTML-CSS</option>
+                </select>
                 <div className='btns'>
-                    <button className='addbtn' onClick={submit}>Add Blog</button>
+                    <button className='addbtn' onClick={submit}>ADD BLOG</button>
                 </div>
             </div>
         </div>

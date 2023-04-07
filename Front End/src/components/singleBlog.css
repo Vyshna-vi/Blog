@@ -20,7 +20,8 @@
     overflow-wrap: break-word;
     font-family: 'EB Garamond', serif;
     font-size: 16px;
-    transform: translate(17px,-10px);
+    transform: translate(0px,-15px);
+    margin:0px 20px  ;
 }
 
 .com1 {
@@ -49,7 +50,8 @@
     font-family: 'Playfair Display', serif;
     font-size: 20px;
     margin-left: 15px;
-    margin-top: 0;
+    transform: translate(0px -60px);
+    /* margin-top: 0; */
 }
 
 
@@ -61,7 +63,8 @@ hr{
 }
 
 .bottom{
-    transform: translate(0px,0px);
+    transform: translate(0px,-55px);
+    /* border: 1px solid black; */
 }
 
 .likeicons{
@@ -72,4 +75,8 @@ hr{
 
 .thumbicon:hover{
 color: indianred;
+}
+
+.hr3{
+    transform: translate(0px,-35px);
 }

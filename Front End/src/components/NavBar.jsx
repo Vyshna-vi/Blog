@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './allblog.css'
 import { UserContext } from './Usercontext/UserContext'
@@ -17,6 +17,7 @@ function NavBar() {
                 <button className='navbtns'><Link className='navbtns' to="/">Home</Link></button>
                 <button className='navbtns'><a href="#footer" className='navbtns'>About</a></button>
                 <button className='navbtns'><a href="#footer" className='navbtns'>Contact</a></button>
+                <SelectBoxComponent/>
                 {loggedInUser && <button className='navbtns'><Link to="/addblog" className='navbtns'>Add Blog</Link></button>}
                 {loggedInUser && <button className='navbtns'><Link to="/singleuserblog" className='navbtns'>View Blogs</Link></button>}
                 {loggedInUser ? "" : <button className='navbtns'><Link to="/signup" className='navbtns'>Sign Up</Link></button>}
@@ -26,5 +27,7 @@ function NavBar() {
 
     )
 }
+import { selectCategory } from '../Api/api'
+import SelectBoxComponent from './SelectBoxComponent'
 
 export default NavBar

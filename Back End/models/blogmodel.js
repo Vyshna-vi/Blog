@@ -22,6 +22,10 @@ const blogSchema = new mongoose.Schema({
         maxLength: 200,
         required: true,
     },
+    category: {
+        type: String,
+        require: true,
+    }
 })
 
 

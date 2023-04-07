@@ -32,10 +32,11 @@ function SingleUserBlog({ Blog }) {
         <p className='singlepara4'>{Blog.date_posted}</p>
         <p className='singlepara2'>{Blog.author_name}</p>
       </div>
-      <hr  className='hr1'/>
+      <hr className='hr1' />
       <p className='singlepara5'>{Blog.blog_title}</p>
       <p className='singlepara1'>{Blog.blog_descrip}</p>
-      <hr className='hr2'/>
+      <p className='singlepara3'>{Blog.category}</p>
+      <hr className='hr2' />
       <DeleteIcon onClick={deleteOne} className='deleteicon' />
       <EditIcon className='editicon' onClick={editBlog} />
     </div>

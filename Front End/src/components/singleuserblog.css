@@ -1,5 +1,5 @@
 .userblog {
-    width: 550px;
+    width: 650px;
     border-radius: 30px;
     background: #d29bf4dd;
     box-shadow: 15px 15px 30px #e7c3f4, -15px -15px 30px #ffffff;
@@ -12,7 +12,7 @@
 }
 
 .deleteicon {
-    margin-left: 205px;
+    margin-left: 255px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -44,7 +44,15 @@
 }
 
 .singlepara1 {
-    transform: translate(20px, -35px);
+    transform: translate(0px, -35px);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.singlepara3{
+    transform: translate(0px,50px);
+    font-size: 12px;
+    margin-left: 580px;
 }
 
 .singlepara5 {
@@ -59,7 +67,7 @@
 }
 
 .add1 {
-    transform: translate(-270px, 20px);
+    transform: translate(-200px, 20px);
 }
 
 .head1 {

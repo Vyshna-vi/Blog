@@ -49,13 +49,25 @@ const deleteBlog = async (req, res) => {
 const editBlog = async (req, res) => {
     try {
         let editOneBlog = await BlogModel.findOneAndUpdate({ _id: req.params.id }, req.body)
-        console.log("editedblog", editOneBlog);
+        // console.log("editedblog", editOneBlog);
         res.json({ sucess: true, message: "Updated Successfully" })
     } catch (error) {
         res.json({ sucess: false, message: "failed to edit blog" });
-        console.log("editblogerror", error);
+        // console.log("editblogerror", error);
     }
 }
+
+const viewBlogCategory = async (req, res) => {
+    try {
+        let selectOneCategory = await BlogModel.find({ category: req.params.category })
+        res.json({ sucess: true, message: "Selected Successfully" ,selectOneCategory})
+
+    } catch (error) {
+        res.json({ sucess: false, message: "failed to find category" });
+        console.log("findcategoryerror", error);
+    }
+}
+
 
 
 
@@ -69,5 +81,6 @@ module.exports = {
     viewAllBlog,
     viewOneBlog,
     deleteBlog,
-    editBlog
+    editBlog,
+    viewBlogCategory
 }
