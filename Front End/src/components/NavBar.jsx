@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './allblog.css'
 import { UserContext } from './Usercontext/UserContext'
 import LogOut from './LogOut'
+import SelectBoxComponent from './SelectBoxComponent'
 
 
 function NavBar() {
@@ -27,7 +28,5 @@ function NavBar() {
 
     )
 }
-import { selectCategory } from '../Api/api'
-import SelectBoxComponent from './SelectBoxComponent'
 
 export default NavBar

@@ -14,6 +14,7 @@ import FooterComponent from './components/FooterComponent'
 import ViewCategory from './components/ViewCategory'
 import SelectBoxComponent from './components/SelectBoxComponent'
 import ViewOneCategory from './components/ViewOneCategory'
+import ViewBlogInDetail from './components/ViewBlogInDetail'
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path='viewbycategory' element={<ViewOneCategory />} />
             <Route path='viewcategory' element={<ViewCategory />} />
             <Route path='selectbox' element={<SelectBoxComponent/>}/>
+            <Route path='viewblogdetails' element={<ViewBlogInDetail/>}/> 
           </Routes>
         </BrowserRouter>
       </UserProvider>
