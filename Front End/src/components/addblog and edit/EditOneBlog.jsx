@@ -1,9 +1,9 @@
 import { Button, OutlinedInput, TextareaAutosize } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { editBlogapi } from '../Api/api'
+import { editBlogapi } from '../../Api/api'
 import axios from 'axios'
-import './allblog.css'
+import '../allblog/allblog.css'
 
 function EditOneBlog() {
 

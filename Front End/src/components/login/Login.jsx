@@ -2,11 +2,10 @@ import { Button, OutlinedInput } from '@mui/material'
 import axios from 'axios'
 import React, { useRef, useContext } from 'react'
 import './login.css'
-import { UserContext } from './Usercontext/UserContext'
+import { UserContext } from '../Usercontext/UserContext'
 import { useNavigate } from 'react-router-dom'
-import { loginapi } from '../Api/api'
+import { loginapi } from '../../Api/api'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import NavBar from './NavBar'
 
 
 function Login() {

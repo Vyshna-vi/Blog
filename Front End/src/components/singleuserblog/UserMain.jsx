@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import SingleUserBlog from './SingleUserBlog'
-import { UserContext } from './Usercontext/UserContext';
+import { UserContext } from '../Usercontext/UserContext';
 import { useContext } from 'react';
-import { singleUserBlog } from '../Api/api';
+import { singleUserBlog } from '../../Api/api';
 import axios from 'axios';
 import './singleuserblog.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';

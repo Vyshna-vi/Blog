@@ -1,10 +1,10 @@
 import './addblog.css'
 import React, { useRef } from 'react'
 import TextareaAutosize from '@mui/base/TextareaAutosize';
-import { UserContext } from './Usercontext/UserContext';
+import { UserContext } from '../Usercontext/UserContext';
 import { useContext } from 'react';
 import axios from 'axios';
-import { addblogapi } from '../Api/api';
+import { addblogapi } from '../../Api/api';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 

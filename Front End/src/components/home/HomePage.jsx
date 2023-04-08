@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './NavBar'
-import AllBlog from './AllBlog'
+import AllBlog from '../allblog/AllBlog'
 import FooterComponent from './FooterComponent'
 
 function HomePage() {

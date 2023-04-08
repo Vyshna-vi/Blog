@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react'
-import './allblog.css'
-import axios from 'axios'
-import { selectCategory } from '../Api/api'
+import '../allblog/allblog.css'
 import { useNavigate } from 'react-router-dom'
 
 function SelectBoxComponent() {

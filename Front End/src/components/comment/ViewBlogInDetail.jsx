@@ -5,11 +5,11 @@ import CommentIcon from '@mui/icons-material/Comment';
 import { TextareaAutosize } from '@mui/material';
 import CommentComponent from './CommentComponent';
 import './comment.css'
-import { UserContext } from './Usercontext/UserContext';
+import { UserContext } from '../Usercontext/UserContext';
 import { useContext } from 'react';
-import { viewCommentApi } from '../Api/api';
+import { viewCommentApi } from '../../Api/api';
 import axios from 'axios';
-import { addCommentApi } from '../Api/api';
+import { addCommentApi } from '../../Api/api';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function ViewBlogInDetail() {

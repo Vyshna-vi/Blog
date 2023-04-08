@@ -13,7 +13,7 @@ function ViewCategory() {
 
     return (
         <div className='viewonecategory'>
-        <button className='view' onClick={backView}>Back</button>
+            <button className='view' onClick={backView}>Back</button>
             <ViewOneCategory />
         </div>
     )

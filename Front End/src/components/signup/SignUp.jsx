@@ -3,9 +3,8 @@ import { Button, TextField } from '@mui/material'
 import axios from 'axios'
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { signup } from '../Api/api'
+import { signup } from '../../Api/api'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import NavBar from './NavBar'
 
 
 function SignUp() {

@@ -3,7 +3,7 @@ import './singleuserblog.css'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
-import { deleteSingleBlog, editBlogapi } from '../Api/api';
+import { deleteSingleBlog, editBlogapi } from '../../Api/api';
 import { useNavigate } from 'react-router-dom';
 
 

@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import SingleBlog from './SingleBlog'
 import axios from 'axios'
-import { allBlogapi } from '../Api/api'
-import './allblog.css'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { useNavigate } from 'react-router-dom'
-import NavBar from './NavBar'
+import { allBlogapi } from '../../Api/api'
+import './allblog.css'  
 
 function AllBlog() {
 
     const [allBlogs, setAllBlogs] = useState()
 
-    const navigate = useNavigate()
 
     async function viewAllBlog() {
         let res = await axios.get(allBlogapi)
@@ -20,10 +16,6 @@ function AllBlog() {
     }
 
     useEffect(() => { viewAllBlog() }, [])
-
-    function back(){
-        navigate('/')
-    }
 
 
     return (

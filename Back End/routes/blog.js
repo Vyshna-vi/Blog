@@ -1,5 +1,5 @@
 const express = require("express");
-const { addBlog, viewAllBlog, viewOneBlog, deleteBlog, editBlog, viewBlogCategory } = require("../controllers/blogccontroller");
+const { addBlog, viewAllBlog, viewOneBlog, deleteBlog, editBlog, viewBlogCategory, viewSingleUserBlogs } = require("../controllers/blogccontroller");
 const { addComment, viewCommant } = require("../controllers/commentcontroller");
 const router = express.Router();
 
@@ -13,6 +13,7 @@ router.patch("/editblog/:id", editBlog)
 router.get("/viewcategory/:category", viewBlogCategory)
 router.post("/addcomment", addComment)
 router.get("/viewcomment/:id", viewCommant)
+router.get("/viewsingleuserblog/:id",viewSingleUserBlogs)
 
 
 module.exports = router;
