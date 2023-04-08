@@ -22,9 +22,7 @@ function ViewBlogInDetail() {
 
     const { loggedInUser } = useContext(UserContext)
 
-    const [review, setReview] = useState()
-
-    const [reviews, setReviews] = useState([])
+    const [reviews, setReviews] = useState()
 
     const navigate = useNavigate()
 
@@ -44,31 +42,40 @@ function ViewBlogInDetail() {
             console.log("response when command added", response);
             textRef.current.value = ""
             setRefresh(!refresh)
+            viewCommant()
         } else {
             navigate('/login')
         }
     }
 
     async function viewCommant() {
-        let responses = await axios.get(viewCommentApi + location.state.singleblog._id)
-        console.log("responses", responses);
-        setReviews(responses.data.singleComment)
+        if (reviews) {
+            setReviews(false)
+        } else {
+            let responses = await axios.get(viewCommentApi + location.state.singleblog._id)
+            console.log("responses", responses);
+            setReviews(responses.data.singleComment)
+
+        }
+
     }
-    useEffect(() => { viewCommant() }, [refresh])
+    useEffect(() => { }, [refresh])
 
-
+    function previous() {
+        navigate('/')
+    }
     return (
         <div className='viewsingleblogdetails'>
             <div className='viewupper'>
                 <p className='upperdate'>date_posted</p>
                 <p className='uppername'>author_name</p>
                 <p className='uppercategory'>category</p>
+                <button onClick={previous} className='previousbtn'>Previous</button>
             </div>
             <div className='middle'>
                 <div>
-                    <p className='middletitle'>blog_title</p>
-                </div>
-                <div className='imgdiv'>
+                    <h3 className='middletitle'>blog_title</h3>
+
                     {/* <img src="https://wallpaperbat.com/img/236941-food-lunch-closeup-photography-colorful-wallpaper-hd.jpg" alt="" className='imgfood'/> */}
                     <p className='middledescrip'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.</p>
                 </div >
@@ -76,14 +83,15 @@ function ViewBlogInDetail() {
             <div className='thumbicons'>
                 <ThumbUpOffAltIcon className='thumbicon2' />
                 <ThumbDownOffAltIcon className='thumbicon2' />
-                <CommentIcon className='thumbicon2' />
+                <CommentIcon className='thumbicon2' onClick={viewCommant} />
             </div>
             <div class="d-flex justify-content-center pt-3 pb-2">
                 <div className='addcomt'>
-                    <TextareaAutosize placeholder="Add comment..." class="form-control addtxt" ref={textRef} />
+                    <TextareaAutosize placeholder="Add comment..." class="form-control addtxt" ref={textRef} /><br />
                     <button onClick={submit} className='commantbtn'>Submit</button>
                 </div>
-                {reviews.map((e) => {
+                <h4 className='h44'>Comments</h4>
+                {reviews && reviews.map((e) => {
                     return (
                         <CommentComponent comments={e} />
                     )

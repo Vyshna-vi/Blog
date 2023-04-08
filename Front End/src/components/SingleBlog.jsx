@@ -2,16 +2,16 @@ import React from 'react'
 import './singleBlog.css'
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
-import CommentIcon from '@mui/icons-material/Comment';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { useNavigate } from 'react-router-dom';
+import ShareIcon from '@mui/icons-material/Share';
 
 function SingleBlog({ singleblog }) {
 
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
-    function view(){
-        navigate('viewblogdetails',{state:{singleblog}})
+    function view() {
+        navigate('viewblogdetails', { state: { singleblog } })
     }
 
     return (
@@ -29,8 +29,8 @@ function SingleBlog({ singleblog }) {
             <div className='likeicons'>
                 <ThumbUpOffAltIcon className='thumbicon' />
                 <ThumbDownOffAltIcon className='thumbicon' />
-                <CommentIcon className='thumbicon' />
-                <OpenInNewIcon className='thumbicon' onClick={view}/>
+                <ShareIcon className='thumbicon' />
+                <OpenInNewIcon className='thumbicon' onClick={view} />
             </div>
         </div >
     )
