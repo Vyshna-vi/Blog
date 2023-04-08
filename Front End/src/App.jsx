@@ -15,6 +15,8 @@ import ViewCategory from './components/ViewCategory'
 import SelectBoxComponent from './components/SelectBoxComponent'
 import ViewOneCategory from './components/ViewOneCategory'
 import ViewBlogInDetail from './components/ViewBlogInDetail'
+import CommentComponent from './components/CommentComponent'
+
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
             <Route path='viewcategory' element={<ViewCategory />} />
             <Route path='selectbox' element={<SelectBoxComponent/>}/>
             <Route path='viewblogdetails' element={<ViewBlogInDetail/>}/> 
+            <Route path='comment' element={<CommentComponent/>}/>
           </Routes>
         </BrowserRouter>
       </UserProvider>

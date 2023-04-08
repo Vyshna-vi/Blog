@@ -15,7 +15,7 @@ function AllBlog() {
 
     async function viewAllBlog() {
         let res = await axios.get(allBlogapi)
-        console.log(res);
+        // console.log(res);
         setAllBlogs(res.data.allBlog)
     }
 

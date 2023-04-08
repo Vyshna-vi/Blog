@@ -13,3 +13,7 @@ export const deleteSingleBlog = "http://localhost:5000/blog/deleteblog/"
 export const editBlogapi="http://localhost:5000/blog/editblog/"
 
 export const selectCategory="http://localhost:5000/blog/viewcategory/"
+
+export const viewCommentApi="http://localhost:5000/blog/viewcomment/"
+
+export const addCommentApi="http://localhost:5000/blog/addcomment"

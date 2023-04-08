@@ -143,36 +143,32 @@
     position: relative;
 }
 
+.dropdown:hover{
+    border: none;
+}
+
 button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.dropdown-options {
-    display: none;
-    position: absolute;
-    overflow: auto;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-}
-
-.dropdown:hover .dropdown-options {
+.navbtns{
     display: block;
-}
+} 
 
 .dropdown-options .linkcat {
     display: block;
     color: #000000;
-    padding: 5px;
+    padding: 15px;
     text-decoration: none;
 }
 
-.dropdown-options .linkcat:hover {
+.dropdwon-options .linkcat:hover {
     color: #f6f6f9;
     background-color: #5065cd;
     border-radius: 5px;
+    border: none;
 }
 
 /* css for viewcategory */

@@ -11,7 +11,7 @@ function SingleBlog({ singleblog }) {
     const navigate=useNavigate()
 
     function view(){
-        navigate('viewblogdetails',)
+        navigate('viewblogdetails',{state:{singleblog}})
     }
 
     return (
