@@ -16,6 +16,7 @@ import SelectBoxComponent from './components/home/SelectBoxComponent'
 import ViewOneCategory from './components/viewcategory/ViewOneCategory'
 import ViewBlogInDetail from './components/comment/ViewBlogInDetail'
 import CommentComponent from './components/comment/CommentComponent'
+import SingleUserAllBlog from './components/singleuserblog/SingleUserAllBlog'
 
 
 
@@ -40,6 +41,7 @@ function App() {
             <Route path='selectbox' element={<SelectBoxComponent />} />
             <Route path='viewblogdetails' element={<ViewBlogInDetail />} />
             <Route path='comment' element={<CommentComponent />} />
+            <Route path='authorallblogs' element={<SingleUserAllBlog/>}/>
           </Routes>
         </BrowserRouter>
       </UserProvider>

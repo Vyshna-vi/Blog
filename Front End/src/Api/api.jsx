@@ -10,10 +10,16 @@ export const singleUserBlog = "http://localhost:5000/blog/singleblog/"
 
 export const deleteSingleBlog = "http://localhost:5000/blog/deleteblog/"
 
-export const editBlogapi="http://localhost:5000/blog/editblog/"
+export const editBlogapi = "http://localhost:5000/blog/editblog/"
 
-export const selectCategory="http://localhost:5000/blog/viewcategory/"
+export const selectCategory = "http://localhost:5000/blog/viewcategory/"
 
-export const viewCommentApi="http://localhost:5000/blog/viewcomment/"
+export const viewCommentApi = "http://localhost:5000/blog/viewcomment/"
 
-export const addCommentApi="http://localhost:5000/blog/addcomment"
+export const addCommentApi = "http://localhost:5000/blog/addcomment"
+
+export const allBlogOfOneApi = "http://localhost:5000/blog/viewsingleuserblog/"
+
+export const likeApi="http://localhost:5000/blog/likeblog"
+
+export const likeCountApi="http://localhost:5000/blog/getlikecount/642f97cf1b62b8d0ad2f98b9"

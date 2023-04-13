@@ -162,3 +162,15 @@
 	color: white;
 	background-color: rgba(116, 110, 110, .2);
 }
+
+.authorallbtn{
+	border: none;background-color: rgba(69, 161, 118, 0.404);
+	color: #0f4c55;
+	font-weight: bold;
+	margin-left: 800px;
+}
+
+.authorallbtn:hover{
+	background-color: #0f4c55;
+	color: white;
+}

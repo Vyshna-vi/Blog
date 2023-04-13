@@ -70,7 +70,7 @@ const viewBlogCategory = async (req, res) => {
 
 const viewSingleUserBlogs = async (req, res) => {
     try {
-        let singleUserBlog = await BlogModel.find({ author_id: req.params.author_id }, req.body)
+        let singleUserBlog = await BlogModel.find({ author_id: req.params.id })
         console.log("singleuserblog", singleUserBlog);
         res.json({ sucess: true, message: "Successfull", singleUserBlog })
     } catch (error) {

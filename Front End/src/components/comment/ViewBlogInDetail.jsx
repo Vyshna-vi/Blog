@@ -7,7 +7,7 @@ import CommentComponent from './CommentComponent';
 import './comment.css'
 import { UserContext } from '../Usercontext/UserContext';
 import { useContext } from 'react';
-import { viewCommentApi } from '../../Api/api';
+import { allBlogOfOneApi, likeApi, viewCommentApi } from '../../Api/api';
 import axios from 'axios';
 import { addCommentApi } from '../../Api/api';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -64,6 +64,42 @@ function ViewBlogInDetail() {
     function previous() {
         navigate('/')
     }
+
+    async function readAuthorAllBlog(){
+        let response=await axios.get(allBlogOfOneApi+location.state.singleblog.author_id)
+        console.log(response);
+        navigate("/authorallblogs", {state:response.data.singleUserBlog})
+    }
+
+    async function addlike(){
+
+        let body={
+          blogid:location.state.singleblog._id,
+          userid:loggedInUser._id
+        }
+  
+  
+          let response=await axios.post(likeApi,body)
+          console.log("added like",response);
+          if(likeadd.data.msg=="you are already liked"){
+              alert("you already liked")
+          }
+      }
+  
+  
+      async function likeCount(){
+          let response=await axios.get(likeCountApi+location.state.singleblog._id)
+          console.log("get likes",response);
+          setlikes(response.data.count)
+  
+  
+      }
+    
+  
+      useEffect(() => {likeCount() }, [refresh])
+  
+    
+
     return (
         <div className='viewsingleblogdetails'>
             <div className='viewupper'>
@@ -80,6 +116,9 @@ function ViewBlogInDetail() {
                     <p className='middledescrip'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nobis aut accusamus laboriosam veritatis ratione ipsam incidunt deleniti numquam modi optio fugit ex ea, quaerat voluptas nesciunt maxime sapiente ab.</p>
                 </div >
             </div >
+            <div className='authorallbtndiv'>
+                <button className='authorallbtn' onClick={readAuthorAllBlog}>Read All Blogs of {location.state.singleblog.author_name}</button>
+            </div>
             <div className='thumbicons'>
                 <ThumbUpOffAltIcon className='thumbicon2' />
                 <ThumbDownOffAltIcon className='thumbicon2' />
