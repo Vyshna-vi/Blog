@@ -18,16 +18,16 @@ function SingleUserAllBlog() {
 
         <>
             <div>
-                <h2>kgi</h2>
+                <h2>{allBlog&&allBlog[0].author_name}</h2>
             </div>
             {allBlog && allBlog.map((e) => {
                 return (
                     <div>
                         <div>
-                            <p>dojdl</p>
-                            <p>DatePosted</p>
-                            <p>Category</p>
-                            <p>Description</p>
+                            <h5>{e.blog_title}</h5>
+                            <p>{e.blog_descrip}</p>
+                            <p>{e.category}</p>
+                            <p>{e.date_posted}</p>
                         </div>
                     </div>
 

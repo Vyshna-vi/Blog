@@ -20,6 +20,6 @@ export const addCommentApi = "http://localhost:5000/blog/addcomment"
 
 export const allBlogOfOneApi = "http://localhost:5000/blog/viewsingleuserblog/"
 
-export const likeApi="http://localhost:5000/blog/likeblog"
+export const likeApi = "http://localhost:5000/blog/likeblog"
 
-export const likeCountApi="http://localhost:5000/blog/getlikecount/642f97cf1b62b8d0ad2f98b9"
+export const likeCountApi = "http://localhost:5000/blog/getlikecount/"
